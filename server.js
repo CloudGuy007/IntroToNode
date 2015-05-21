@@ -1,7 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path');
 
 var app = express();    
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 router.use('/', function(req,res,next){
@@ -11,7 +14,7 @@ router.use('/', function(req,res,next){
 
 router.route('/')
         .get(function(req,res){
-            res.send(req.message);
+            res.sendFile(path.join(__dirname+'/lib/views/index.html'));
             })
 app.use(router);        
 

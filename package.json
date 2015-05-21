@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jonathanfmills/IntroToNode",
   "dependencies": {
-    "express": "^4.12.4"
+    "express": "^4.12.4",
+    "path": "^0.11.14"
   }
 }
